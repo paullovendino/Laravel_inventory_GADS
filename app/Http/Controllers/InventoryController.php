@@ -146,12 +146,13 @@ class InventoryController extends Controller
                     'SKU_Serial_Number' => $request->SKU_Serial_Number,
                 ]);
                 return response()->json([
-                    'status' => 200,
+                    'status' => true,
+                    'code' => 200,
                     'message' => 'Item updated successfully',
                     'product' => $item
                   ], 200);
             }else{
-                response()->json([
+                return response()->json([
                     'status' => false,
                     'code' => 404,
                     'error' => 'Item not found',
