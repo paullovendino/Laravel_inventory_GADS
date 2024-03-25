@@ -25,7 +25,7 @@ class InventoryController extends Controller
 
     public function delete(Request $request){
         $validator = Validator::make($request->all(), [
-            'item_id' => 'required',
+            'id' => 'required',
         ]);
 
         if($validator->fails()){

@@ -14,13 +14,10 @@ class products_table extends Model
 
     //
     public $timestamps = false; //Disable timestamps
-    public $primaryKey = 'item_id'; //Set Primary Key
+    public $primaryKey = 'id'; //Set Primary Key
 
     //
     protected $fillable = [
-        //Item id
-        'item_id',
-        
         //Need Info
         'Model_Name',
         'Category',
