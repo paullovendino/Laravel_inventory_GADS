@@ -18,4 +18,6 @@ Route::prefix('/inventory')->group(function(){
     Route::post('/search', [InventoryController::class, 'search']);
     Route::post('/create', [InventoryController::class, 'create']);
     Route::put('/update', [InventoryController::class, 'update']);
+    Route::post('/create', [InventoryController::class, 'create']);
+    Route::put('/update', [InventoryController::class, 'update']);
 });
