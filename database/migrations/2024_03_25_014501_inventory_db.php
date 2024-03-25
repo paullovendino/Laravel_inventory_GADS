@@ -14,7 +14,7 @@ return new class extends Migration
         //
         Schema::create('products_table', function (Blueprint $table) {
             //Item id
-            $table->bigIncrements('item_id'); //Primary Key if Any
+            $table->id();
 
             //Need Info
             $table->string('Model_Name');

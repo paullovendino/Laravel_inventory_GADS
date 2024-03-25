@@ -27,9 +27,6 @@ class products_table_seed extends Seeder
 
         for ($i = 0; $i < $numberOfData; $i++) {
             PT::create([
-                //Item id
-                'item_id' => $i + 1,
-
                 //Need Info
                 'Model_Name' => $faker->company,
                 'Category' => $faker->randomElement($randomDataComputers),
