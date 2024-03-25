@@ -37,7 +37,7 @@ class InventoryController extends Controller
             ], 405);
         }
 
-        $item = products_table::find($request->input('item_id'));
+        $item = products_table::find($request->input('id'));
 
         if($item == null){
             return response()->json([
@@ -68,12 +68,26 @@ class InventoryController extends Controller
     }
 
     public function update(Request $request){
-        $validator = Validator::make($request->all(), [
 
-        ]);
     }
 
-    public function filter(){
+    public function search(Request $request){
+        $data = products_table::where('id', $request->input('id'))
+        ->orWhere('Model_Name', $request->input('modelName'))
+        ->orWhere('Category', $request->input('category'))
+        ->orWhere('Department_assigned_item_location', $request->input('department'))
+        ->orWhere('SKU_Serial_Number', $request->input('sku'))
+        ->get();
+
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'error' => null,
+            'data' => $data,
+        ], 200);
+    }
+
+    public function filter(Request $request){ //waiting for frontend
 
     }
 }
