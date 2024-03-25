@@ -15,4 +15,5 @@ Route::get('/user', function (Request $request) {
 Route::prefix('/inventory')->group(function(){
     Route::get('/index', [InventoryController::class, 'index']);
     Route::post('/delete', [InventoryController::class, 'delete']);
+    Route::post('/search', [InventoryController::class, 'search']);
 });
