@@ -88,6 +88,6 @@ class InventoryController extends Controller
     }
 
     public function filter(Request $request){ //waiting for frontend
-        
+
     }
 }
