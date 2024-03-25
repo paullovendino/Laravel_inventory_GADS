@@ -62,7 +62,7 @@ class InventoryController extends Controller
                 return response()->json([
                     'status' => false,
                     'code' => 404,
-                    'message' => 'Something went wrong.'
+                    'message' => 'Item create request failed'
                 ], 404);
             }
         }
