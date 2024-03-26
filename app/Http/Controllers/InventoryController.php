@@ -20,7 +20,6 @@ class InventoryController extends Controller
     }
 
     public function create(Request $request){
-        // dd($request);
         $validator = Validator::make($request->all(), [
             'Model_Name' => 'required|string|max:255',
             'Category' => 'required|string|max:255',
