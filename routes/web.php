@@ -19,3 +19,15 @@ Route::redirect('/','/iAdmin');
 Route::get('/iAdmin', function(){
     return view('for_login/loginView');
 })->name('adminInventoryDashboard');
+
+Route::get('/dashboard', function(){
+    return view('for_login/dashboard');
+})->name('adminInventoryDashboard');
+
+Route::get('/items', function(){
+    return view('for_login/items');
+})->name('adminInventoryItems');
+
+Route::get('/category', function(){
+    return view('for_login/category');
+})->name('adminInventoryCategory');
